@@ -27,7 +27,7 @@ response = HTTP.use(:auto_inflate).headers(auth_header)
 res_hash = JSON.parse(response)
 
 if res_hash.first["EstimateTime"] <= 300
-  puts "Incomming! #{res_hash.first["EstimateTime"]} seconds left!"
+  puts "Incoming! #{res_hash.first["EstimateTime"]} seconds left!"
 else
   puts "Zzz... #{res_hash.first["EstimateTime"]} seconds left!"
 end
